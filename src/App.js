@@ -66,7 +66,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="p-5 bg-white shadow App-header">
-          <h1 className="text-center text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
+          <h1 className="text-center text-2xl font-bold leading-7 text-blue-900 sm:text-3xl sm:truncate">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-20 mx-auto mb-2 hidden md:block">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg> My Pace Converter
@@ -76,7 +76,7 @@ class App extends Component {
           </h2>
         </header>
         <section className="max-w-lg mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-          <div className="text-6xl text-gray-800 mb-6">
+          <div className="text-6xl text-blue-800 mb-6">
             { this.state.converted }
           </div>
 
@@ -95,17 +95,36 @@ class App extends Component {
             </button>
           </div>
         </section>
-        <section className="max-w-md mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-          <h3 className="text-lg font-bold text-center mb-4 text-gray-500">API Documentation</h3>
-          <p className="bg-white p-4 rounded">
-          GET: <br />https://mypaceconverter/to-km?pace=8:51<br /><br />
+        <section className="max-w-lg mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+          <h3 className="text-lg font-bold text-center mb-1 text-gray-500">API Documentation</h3>
+          <h4 className="text-sm italic text-center mb-4 text-gray-400">JSON</h4>
+          <div className="bg-white p-4 rounded">
+            <b>https://mypaceconverter/to-km/</b>&lt;pace&gt;<br /><br />
+            GET: <br /><i>https://mypaceconverter/to-km/8:51</i><br /><br />
+            Returns: <br />
+            <div className="bg-gray-200 px-2 py-1 rounded">
+              &#x007B; <br />
+                &nbsp;&nbsp;"pace": "5:29",<br />
+                &nbsp;&nbsp;"human": "5:29 min/km",<br />
+                &nbsp;&nbsp;"comparedToWorldRecord": "3:18 slower than world record minute/kilometer pace.",<br />
+                &nbsp;&nbsp;"worldRecord": "Noah Ngeny 2:11/km"<br />
+              &#125;
+            </div>
+            <br /><br />
 
-          Returns: <span className="bg-gray-200 px-2 py-1 rounded">&#x007B; "5:30" &#125;</span><br /><br />
-
-          GET: <br />https://mypaceconverter/to-miles?pace=5:30<br /><br />
-
-          Returns: <span className="bg-gray-200 px-2 py-1 rounded">&#x007B; "8:51" &#125;</span>
-          </p>
+            <b>https://mypaceconverter/to-mi/</b>&lt;pace&gt;<br /><br />
+            GET: <br /><i>https://mypaceconverter/to-mi/5:30</i><br /><br />
+            Returns: <br />
+            <div className="bg-gray-200 px-2 py-1 rounded">
+              &#x007B; <br />
+                &nbsp;&nbsp;"pace": "8:51",<br />
+                &nbsp;&nbsp;"human": "8:51 min/mile",<br />
+                &nbsp;&nbsp;"comparedToWorldRecord": "5:08 slower than world record minute/kilometer pace.",<br />
+                &nbsp;&nbsp;"worldRecord": "Hicham El Guerrouj 3:43/mile"<br />
+              &#125;
+            </div>
+            <br /><br />
+          </div>
         </section>
       </div>
     );

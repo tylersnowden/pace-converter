@@ -8,24 +8,32 @@
     ],
     "rewrites": [
       {
+        "source": "/to-mile/**",
+        "function": "converter"
+      },
+      {
+        "source": "/to-miles/**",
+        "function": "converter"
+      },
+      {
+        "source": "/to-mi/**",
+        "function": "converter"
+      },
+      {
+        "source": "/to-km/**",
+        "function": "converter"
+      },
+      {
+        "source": "/to-kilomter/**",
+        "function": "converter"
+      },
+      {
+        "source": "/to-kilometers/**",
+        "function": "converter"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
-      },
-      {
-        "source": "/to-mi",
-        "function": "toMi"
-      },
-      {
-        "source": "/to-miles",
-        "function": "toMi"
-      },
-      {
-        "source": "/to-km",
-        "function": "toKm"
-      },
-      {
-        "source": "/to-kilometers",
-        "function": "toKm"
       }
     ]
   },
