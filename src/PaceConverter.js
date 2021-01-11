@@ -27,7 +27,7 @@ export default class PaceConverter {
 
     convertSecondsToString(secondsTotal) {
         var minutes = Math.floor(secondsTotal / 60);
-        var seconds = Math.floor(secondsTotal % 60).toString();
+        var seconds = Math.round(secondsTotal % 60).toString();
         while (seconds.length < 2) seconds = "0" + seconds;
         return minutes + ":" + seconds;
     }
