@@ -1,0 +1,40 @@
+{
+  "hosting": {
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/to-mi",
+        "function": "toMi"
+      },
+      {
+        "source": "/to-miles",
+        "function": "toMi"
+      },
+      {
+        "source": "/to-km",
+        "function": "toKm"
+      },
+      {
+        "source": "/to-kilometers",
+        "function": "toKm"
+      }
+    ]
+  },
+  "emulators": {
+    "hosting": {
+      "port": 5000
+    },
+    "ui": {
+      "enabled": false
+    }
+  }
+}
