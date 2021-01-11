@@ -99,8 +99,8 @@ class App extends Component {
           <h3 className="text-lg font-bold text-center mb-1 text-gray-500">API Documentation</h3>
           <h4 className="text-sm italic text-center mb-4 text-gray-400">JSON</h4>
           <div className="bg-white p-4 rounded">
-            <b>https://mypaceconverter/to-km/</b>&lt;pace&gt;<br /><br />
-            GET: <br /><i>https://mypaceconverter/to-km/8:51</i><br /><br />
+            <b>https://mypaceconverter.com/to-km/</b>&lt;pace&gt;<br /><br />
+            GET: <br /><i>https://mypaceconverter.com/to-km/8:51</i><br /><br />
             Returns: <br />
             <div className="bg-gray-200 px-2 py-1 rounded">
               &#x007B; <br />
@@ -112,8 +112,8 @@ class App extends Component {
             </div>
             <br /><br />
 
-            <b>https://mypaceconverter/to-mi/</b>&lt;pace&gt;<br /><br />
-            GET: <br /><i>https://mypaceconverter/to-mi/5:30</i><br /><br />
+            <b>https://mypaceconverter.com/to-mi/</b>&lt;pace&gt;<br /><br />
+            GET: <br /><i>https://mypaceconverter.com/to-mi/5:30</i><br /><br />
             Returns: <br />
             <div className="bg-gray-200 px-2 py-1 rounded">
               &#x007B; <br />
